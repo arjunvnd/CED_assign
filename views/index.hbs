@@ -1,0 +1,29 @@
+<div>
+    <form method="post">
+        <label for="task">Task</label>
+        <input type="text" name="task">
+        <input id="addTask" type="submit" value="Submit">
+    </form>
+    <br>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Completed</th>
+            <th></th>
+        </tr>
+        {{#each todos}} 
+        <tr>
+            
+            <td>{{name}}</td>
+            <td>{{completed}}</td>
+            
+
+            <input type="hidden" id="idEl" value={{_id}} />
+            <td id="comp"><input class="complete" type="submit" value="Complete" ></td>
+            
+        </tr>
+        {{/each}}
+
+
+    </table>
+</div>
